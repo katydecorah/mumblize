@@ -1,0 +1,40 @@
+{
+  "name": "mumblize",
+  "version": "0.1.0",
+  "description": "Mumble a sentence or word.",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "tape test/*.test.js"
+  },
+  "author": "Katy DeCorah",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "tape": "^4.12.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "is-punctuation": "^0.2.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katydecorah/mumblize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/katydecorah/mumblize/issues"
+  },
+  "homepage": "https://github.com/katydecorah/mumblize#readme"
+}
