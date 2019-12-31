@@ -1,4 +1,4 @@
-# mumblize
+# mumblize [![Build Status](https://travis-ci.com/katydecorah/mumblize.svg?branch=master)](https://travis-ci.com/katydecorah/mumblize)
 
 Mumble a sentence or word.
 
