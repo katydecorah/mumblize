@@ -1,5 +1,48 @@
 const test = require("tape");
 const fn = require("../");
+const lastLetters = require("../lib/replace-last-letter.json");
+const removeWord = require("../lib/remove-word.json");
+const replaceWord = require("../lib/replace-word.json");
+
+test("replace-last-letter.json", assert => {
+  const values = Object.keys(lastLetters).reduce((arr, letter) => {
+    arr = arr.concat(lastLetters[letter]);
+    return arr;
+  }, []);
+  const findDuplicates = arr =>
+    arr.filter((item, index) => arr.indexOf(item) != index);
+  assert.deepEqual(
+    findDuplicates(values),
+    [],
+    `"${findDuplicates(values)}" appears as a value for more than one letter`
+  );
+  values.forEach(v => {
+    assert.equal(v, v.toLowerCase(), `"${v}" must be lowercase`);
+  });
+  Object.keys(lastLetters).forEach(v => {
+    assert.equal(v, v.toLowerCase(), `"${v}" must be lowercase`);
+  });
+  assert.end();
+});
+
+test("remove-word.json", assert => {
+  removeWord.forEach(v => {
+    assert.equal(v, v.toLowerCase(), `"${v}" must be lowercase`);
+  });
+  assert.end();
+});
+
+test("replace-word.json", assert => {
+  Object.keys(replaceWord).forEach(k => {
+    assert.equal(k, k.toLowerCase(), `"${k}" must be lowercase`);
+    assert.equal(
+      replaceWord[k],
+      replaceWord[k].toLowerCase(),
+      `"${replaceWord[k]}" must be lowercase`
+    );
+  });
+  assert.end();
+});
 
 test("mumblize", assert => {
   assert.equal(fn.mumblize("hello"), "hurn");
