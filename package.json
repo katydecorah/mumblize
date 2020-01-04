@@ -1,6 +1,6 @@
 {
   "name": "mumblize",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mumble a sentence or word.",
   "main": "index.js",
   "scripts": {
