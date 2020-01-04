@@ -48,6 +48,4 @@ function mumblize(sentence) {
   return makeMumbles(words).join(" ");
 }
 
-module.exports = {
-  mumblize
-};
+module.exports = mumblize;
