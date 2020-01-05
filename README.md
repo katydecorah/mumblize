@@ -14,7 +14,7 @@ npm install mumblize
 const mumblize = require("mumblize");
 
 mumblize("the kerning is too tight");
-// tur kurn ir turn turt'
+// tur kurn ir turn turt
 ```
 
 ## CLI
