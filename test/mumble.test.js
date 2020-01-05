@@ -60,5 +60,7 @@ test("mumblize", assert => {
     mumblize("do you want me to just put butt in"),
     "durn yurr wurt murr turr jurt purt burt irn"
   );
+  assert.equal(mumblize("it is snowing"), "irrt ir snurn");
+  assert.equal(mumblize("i want a snack"), "wurt er snurk");
   assert.end();
 });

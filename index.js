@@ -2,6 +2,7 @@ const isPunctuation = require("is-punctuation");
 const wordMap = require("./lib/replace-word.json"); // replace entire word with these mapping
 const lastLetters = require("./lib/replace-last-letter.json"); // replace these last letters
 const removeWord = require("./lib/remove-word.json"); // completely remove these words
+const allowSecondLetter = require("./lib/allow-second-letter.json");
 
 function replaceLastLetter(lastLetter) {
   return (
@@ -14,6 +15,7 @@ function replaceLastLetter(lastLetter) {
 
 function wordToMumble(word) {
   let firstLetter = word[0],
+    secondLetter = word[1],
     lastLetter = word[word.length - 1],
     puncuation = undefined,
     string = "";
@@ -22,10 +24,12 @@ function wordToMumble(word) {
     puncuation = word[word.length - 1];
     lastLetter = word[word.length - 2];
   }
+  // go through second letter allow list
+  if (allowSecondLetter.indexOf(secondLetter) === -1) secondLetter = "";
   // replace last letter if necessary
   lastLetter = replaceLastLetter(lastLetter);
   // assemble the word
-  string += `${firstLetter}ur${lastLetter}`;
+  string += `${firstLetter}${secondLetter}ur${lastLetter}`;
   // add back punctuation
   if (puncuation) string += puncuation;
   return string;
