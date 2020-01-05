@@ -2,17 +2,32 @@
 
 Mumble a sentence or word.
 
-## Install:
+## Install
 
 ```
 npm install mumblize
 ```
 
-## Usage:
+## Usage
 
 ```js
 const mumblize = require("mumblize");
 
 mumblize("the kerning is too tight");
 // tur kurn ir turn turt'
+```
+
+## CLI
+
+```
+npm install mumblize -g
+```
+
+```bash
+Usage
+  $ mumblize <input>
+
+Examples
+  $ mumblize hello friend
+  hurn furd
 ```
