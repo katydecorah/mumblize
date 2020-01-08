@@ -1,0 +1,26 @@
+{
+  "allow": {
+    "secondLetter": ["n"]
+  },
+  "remove": {
+    "word": ["i"]
+  },
+  "replace": {
+    "lastLetter": {
+      "n": ["a", "e", "i", "o", "u", "y", "g"],
+      "r": ["w"]
+    },
+    "word": {
+      "are": "urr",
+      "you": "yurr",
+      "off": "urf",
+      "is": "ir",
+      "it": "irrt",
+      "the": "tur",
+      "in": "irn",
+      "me": "murr",
+      "to": "turr",
+      "a": "er"
+    }
+  }
+}
