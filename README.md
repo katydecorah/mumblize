@@ -4,7 +4,7 @@ Mumble a sentence or word.
 
 ## Install
 
-```
+```sh
 npm install mumblize
 ```
 
@@ -19,15 +19,23 @@ mumblize("the kerning is too tight");
 
 ## CLI
 
-```
+```sh
 npm install mumblize -g
 ```
 
-```bash
+```sh
 Usage
   $ mumblize <input>
 
 Examples
   $ mumblize hello friend
   hurn furd
+```
+
+Use with [say](https://ss64.com/osx/say.html):
+
+```sh
+mumblize <input> | say
+
+mumblize good morning | say
 ```
